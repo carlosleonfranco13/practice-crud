@@ -1,0 +1,245 @@
+/* Definimos las Custom properties */
+:root{
+    /* Colores */
+    --amarillo     : #ffe15b;
+    --cian         : #00b5a0;
+    --gris         : #606060;
+    --verde        : #004c20;
+    --blanco       : #dadada;
+    --negro        : #1c1c1c;
+    
+    /* Tipografía */
+    --tipo-principal   : 'Sora', sans-serif;
+  }
+
+  /* Reseteamos los margin y paddings de todas las etiquetas */
+* , *::before , *::after{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+  }
+  *::before , *::after{
+    display: block;
+  }
+
+  /* Evitamos problemas con las imagenes */
+img , picture , video , iframe , figure{
+    max-width: 100%;
+    width: 100%;
+    display: block;
+    /* (Opcional) */ object-fit: cover;        
+    /* (Opcional) */ object-position: center center;
+  }
+
+  /* Reseteamos los enlaces para funcionar como cajas... */
+a {
+    display: block;
+    text-decoration: none;
+    color:inherit;
+    font-size:inherit;
+  }
+  /* ... excepto los que se encuentran en párrafos */
+  p a {
+    display: inline;
+  }
+
+  /* Quitamos los puntos de los <li> */
+li {
+    list-style-type: none;
+  }
+
+  /* (Opcional) Configuramos anclas suaves */
+html {
+    scroll-behavior: smooth;
+  }
+
+  /* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1 , h2 , h3 , h4 , h5 , h6 , p ,span , a , strong , blockquote , i , b , u , em {
+    font-size: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    text-decoration: none;
+    color:inherit;
+  }
+
+  /* Evitamos problemas con los pseudoelementos de quotes */
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form , input, textarea, select , button , label{
+    font-family: inherit;
+    font-size: inherit;
+    hyphens: auto;
+    background-color: transparent;
+    color:inherit;
+    display: block;
+    /* (Opcional) */ appearance: none;
+}
+
+/* Reseteamos las tablas */
+table , tr , td {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  /* Evitamos problemas con los SVG */
+svg{
+    width: 100%;
+    display: block;
+    fill: currentColor;
+}
+
+/* Configuramos la tipografía para toda la web */
+body {
+    min-height  : 100vh;
+    font-size   : 100%;
+    font-family : var(--tipo-principal);
+    color       : var(--negro);
+    /* (Opcional) */ hyphens: auto;
+    /* (Opcional) */ font-smooth: always;
+    /* (Opcional) */ -webkit-font-smoothing: antialiased;
+    /* (Opcional) */ -moz-osx-font-smoothing: grayscale;
+  }
+/*============================== END RESET ===================================*/
+
+/*============================ INDEX.html ================================*/
+.body {
+    background: var(--blanco);        
+    min-height: 100%;
+}
+.body__container {
+    display: flex;
+    min-height: 100vh;
+    align-items: flex-start;
+}
+.body__aside {
+    background: var(--negro);
+    width: 20%;
+    padding: 1.5rem 1rem;
+    height: 100vh;
+}
+.aside__h1 {
+    text-transform: uppercase;
+    color: var(--cian);
+    letter-spacing: .1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 2rem;
+}
+.aside__p {
+    margin-top: 1rem;
+    color: var(--blanco);
+}
+.aside__nav {
+    margin-top: 2rem;
+}
+.nav__a {
+    display: block;
+    padding: .5rem 1rem;
+    color: var(--blanco);
+    margin-top: 1.5rem;
+    border: 1px solid var(--cian);
+    color: var(--blanco);
+}
+.nav__a--active, a:hover{
+    background: var(--cian);
+    color: var(--negro);
+}
+
+.main {
+    width: 80%;
+    height: 100vh;
+    background: var(--gris);
+    padding: 2.4rem 1rem;
+}
+.main__title {
+    font-size: 2rem;
+    color: var(--amarillo);
+    text-align: center;
+}
+.table__princ {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+.table__container {
+    padding: 1rem 0;
+    overflow-x: auto;
+}
+.table {
+    min-width: 100%;
+}
+.table__thead {
+    background: var(--blanco);
+}
+.table__thead th {
+    padding: 1rem 2rem;
+    border-bottom: 1px solid --negro;
+    text-align: left;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.tbody {
+    background: var(--blanco);
+}
+
+/*============================ editarCliente.html ================================*/
+.editarCliente {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    align-items: center;
+}
+.editarCliente__container {
+    margin: 1rem .5;
+    padding: 1rem .5;
+    overflow-x: auto;
+    width: 80%;
+}
+.form__container {
+    border: 2px solid --gris;
+    border-bottom: 2px;
+    overflow: hidden;
+}
+.form {
+    background: var(--blanco);
+}
+.input-container {
+    margin-bottom: 1rem;
+}
+.label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.input {
+    border: 2px solid --gris;
+    border-radius: 5rem;
+    width: 100%;
+    padding: 1rem .5rem;
+    color: var(--negro);
+}
+.input:focus {
+    outline: none;
+}
+.submit {
+    background: var(--cian);
+    width: 100%;
+    margin-top: 2.4rem;
+    padding: .5rem;
+    color: var(--blanco);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.submit:hover {
+    background: var(--amarillo);
+    color: var(--negro);
+    cursor: pointer;
+}

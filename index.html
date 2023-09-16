@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica CRUD</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body class="body">
+    <div class="body__container">
+        <aside class="body__aside">
+            <h1 class="aside__h1">CRM - JSONserver</h1>
+            <p class="aside__p">Administra tus Clientes con el CRM - JSONServer</p>
+            <nav class="aside__nav">
+                <a class="nav__a" href="">
+                    Clientes
+                </a>
+                <a class="nav__a" href="">
+                    Nuevo Cliente
+                </a>
+            </nav>
+        </aside> <!-- Sidebar -->
+        <main class="main">
+            <h2 class="main__title">Clientes</h2>
+            <div class="table__princ">
+                <div class="table__container">
+                    <table class="table">
+                        <thead class="table__thead">
+                            <tr class="table__row">
+                                <th>
+                                    Nombre CLiente
+                                </th>
+                                <th>
+                                    Teléfono
+                                </th>
+                                <th>
+                                    Empresa
+                                </th>
+                                <th>
+                                    Acciones
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody id="listado-clientes" class="tbody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
